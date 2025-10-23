@@ -1,0 +1,103 @@
+body{
+  background-image: url('../img/fundo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img{
+  width: 300px;
+  height: auto;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.login-box {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(63, 61, 61, 0.9);
+  padding: 15px;
+  border-radius: 20px;
+  width: 90%;            
+  max-width: 350px;      
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.login-box h2{
+  color: white;
+  font-size: 18px;
+}
+
+.login-box button {
+  width: 85%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.login-box .login-btn {
+  background-color: #ff5200;
+  color: white;
+}
+
+.login-box .register-btn {
+  background-color: black;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
