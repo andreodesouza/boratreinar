@@ -9,17 +9,31 @@
 <body>
   <div class = "container">
 
-    <div class="logo">
-      <img src="img/logo.png" alt="">
+    <div>
+      <img id="logo" class="logo" src="img/logo.png" alt="">
     </div>
 
-    <div class="login-box">
+    <div id="telaInicial" class="tela-inicial">
       <h2>Comece agora mesmo!</h2>
-      <button class="login-btn">Login</button>
-      <button class="register-btn">Registrar</button>
+      <button id="btnLogin" class="login-btn">Login</button>
+      <button id="btnRegistrar" class="register-btn">Registrar</button>
+    </div>   
+
+    <div id="telaLogin" class="tela-login">
+      <h2>Treine com os melhores</h2>
+      <br><br>
+      <input type="text" placeholder="Usuário">
+      <br>
+      <input type="text" placeholder="Senha">
+        <div class="checkbox-group">
+          <input type="checkbox" id="lembrar" name="lembrar">
+          <label for="lembrar">Lembre-me sempre</label>
+        </div>
+      <button class = "entrar">Login</button>
+
     </div>
 
   </div>
-
+  <script src="js/script.js"></script>
 </body>
 </html>

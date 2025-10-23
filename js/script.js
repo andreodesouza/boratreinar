@@ -1,4 +1,5 @@
-setTimeout(() => {
-      document.getElementById('content').classList.add('show-login');
-    }, 5000);
- 
+document.getElementById("btnLogin").addEventListener("click", function() {
+  document.getElementById("logo").style.width = "150px";
+  document.getElementById("telaInicial").style.display = "none";
+  document.getElementById("telaLogin").style.display = "block";
+});

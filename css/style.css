@@ -10,10 +10,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-img{
-  width: 300px;
-  height: auto;
-}
 
 .container{
   display: flex;
@@ -23,14 +19,18 @@ img{
   text-align: center;
 }
 
-.login-box {
+.logo{
+  width: 300px;
+  height: auto;
+}
+
+.tela-inicial {
   position: absolute;
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(63, 61, 61, 0.9);
   padding: 15px;
-  border-radius: 20px;
   width: 90%;            
   max-width: 350px;      
   display: flex;
@@ -41,12 +41,12 @@ img{
 }
 
 
-.login-box h2{
+.tela-inicial h2{
   color: white;
   font-size: 18px;
 }
 
-.login-box button {
+.tela-inicial button {
   width: 85%;
   padding: 12px;
   font-size: 1rem;
@@ -56,17 +56,78 @@ img{
   cursor: pointer;
 }
 
-.login-box .login-btn {
+.tela-inicial .login-btn {
   background-color: #ff5200;
   color: white;
 }
 
-.login-box .register-btn {
+.tela-inicial .register-btn {
   background-color: black;
   color: white;
 }
 
+.tela-login {
+  display: none;
+  background-color: rgba(63, 61, 61, 0.9);
+  padding: 15px;
+  width: 90%;            
+  max-width: 350px;      
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  
+}
 
+
+.tela-login h2{
+  color: white;
+  font-size: 18px;
+}
+
+.tela-login input {
+  width: 85%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  margin-bottom: 15px;
+  gap: 8px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  color: white;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tela-login button{
+  color: white;
+  background-color: #ff5200;
+  width: 85%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
 
 
 
