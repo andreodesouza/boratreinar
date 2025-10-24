@@ -1,6 +1,15 @@
 document.getElementById("btnLogin").addEventListener("click", function() {
+  
   document.getElementById("logo").style.width = "150px";
-  document.body.style.background = "url('img/telalogin.png')";
+  document.body.style.backgroundImage = "url('img/telalogin.png')";
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.height = "100vh";
+  document.body.style.margin = "0";
+  document.body.style.display = "flex";
+  document.body.style.justifyContent = "center";
+  document.body.style.alignItems = "center";
   document.getElementById("telaInicial").style.display = "none";
   document.getElementById("telaLogin").style.display = "block";
 });
