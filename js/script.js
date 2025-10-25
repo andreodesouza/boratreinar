@@ -11,5 +11,15 @@ document.getElementById("btnLogin").addEventListener("click", function() {
   document.body.style.justifyContent = "center";
   document.body.style.alignItems = "center";
   document.getElementById("telaInicial").style.display = "none";
-  document.getElementById("telaLogin").style.display = "block";
+  document.getElementById("telaLogin").style.display = "flex";
+});
+
+document.getElementById("btnVoltar").addEventListener('click', function(){
+  document.getElementById("telaLogin").style.display = "none";
+  document.getElementById("telaInicial").style.display = "flex";
+  document.body.style.backgroundImage = "url('img/fundo.png')";
+
+
+
+
 });
