@@ -18,6 +18,7 @@ document.getElementById("btnVoltar").addEventListener('click', function(){
   document.getElementById("telaLogin").style.display = "none";
   document.getElementById("telaInicial").style.display = "flex";
   document.body.style.backgroundImage = "url('img/fundo.png')";
+    document.getElementById("logo").style.width = "300px";
 
 
 
