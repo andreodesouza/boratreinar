@@ -1,0 +1,171 @@
+body{
+  background-image: url('../img/home.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-image 0.5s ease;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha tudo à esquerda */
+  justify-content: center; /* Centraliza verticalmente */
+  text-align: left;         /* Garante alinhamento do texto */
+  height: 100vh;
+  padding-left: 10%;        /* Espaçamento da borda esquerda */
+}
+
+.tela-home {
+  padding: 15px;
+  width: 90%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* também garante alinhamento à esquerda */
+  gap: 10px;
+}
+
+
+
+.tela-home h1{
+ font-size: 2rem;
+ line-height: 1.2;
+ margin-bottom: 15px;
+ color: white;
+ text-align: left;
+}
+
+.tela-home span{
+  color: #ff5200;
+}
+
+.tela-home p {
+  color: white;  
+  text-align: left;
+  font-size: 0.9rem;
+
+}
+
+.tela-home button {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);  
+  width: 25%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.tela-home .iniciar-btn {
+  background-color: #ff5200;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

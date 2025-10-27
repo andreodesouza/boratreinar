@@ -20,7 +20,8 @@ document.getElementById("btnVoltar").addEventListener('click', function(){
   document.body.style.backgroundImage = "url('img/fundo.png')";
     document.getElementById("logo").style.width = "300px";
 
-
-
-
 });
+
+function login(){
+  window.location.href = "home.html"
+}
