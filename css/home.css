@@ -56,7 +56,7 @@ body{
 
 .tela-home button {
   position: absolute;
-  bottom: 200px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);  
   width: 25%;
