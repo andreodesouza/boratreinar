@@ -143,7 +143,55 @@ body{
   cursor: pointer;
 }
 
+.tela-register{
+  display: none;
+  background-color: rgba(63, 61, 61, 0.9);
+  padding: 15px;
+  width: 90%;            
+  max-width: 350px;      
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  gap: 10px;
+  align-items: center;
+}
 
+.tela-register input{
+  width: 85%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.tela-register h2{
+  color: white;
+  font-size: 14px;
+}
+
+.tela-register p{
+  color: white;
+}
+
+.tela-register button{
+  color: white;
+  background: #ff5200;
+  border-radius: 15px;
+  width: 85%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.tela-register .voltar-btn2{
+  color: white;
+  background: black;
+}
 
 
 
