@@ -22,16 +22,14 @@ body{
 }
 
 .tela-home {
+  display: flex;
   padding: 15px;
   width: 90%;
   max-width: 350px;
-  display: flex;
   flex-direction: column;
   align-items: flex-start; 
   gap: 10px;
 }
-
-
 
 .tela-home h1{
  font-size: 2rem;
@@ -39,6 +37,7 @@ body{
  margin-bottom: 15px;
  color: white;
  text-align: left;
+
 }
 
 .tela-home span{
@@ -52,21 +51,27 @@ body{
 
 }
 
-.tela-home button {
-  position: absolute;
-  bottom: 0px;  
-  width: 25%;
+.botao-home button {
+  color: white;
+  background-color: #ff5200;
+  display: flex;
+  max-width: 350px;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+  gap: 10px; 
+  width: 85%;
   padding: 12px;
   font-size: 1rem;
   font-weight: bold;
   border: none;
   border-radius: 15px;
   cursor: pointer;
-}
-
-.tela-home .iniciar-btn {
-  background-color: #ff5200;
-  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
