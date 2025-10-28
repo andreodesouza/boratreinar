@@ -13,14 +13,12 @@ body{
   
 }
 
-.container {
+.container{
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinha tudo à esquerda */
-  justify-content: center; /* Centraliza verticalmente */
-  text-align: left;         /* Garante alinhamento do texto */
-  height: 100vh;
-  padding-left: 10%;        /* Espaçamento da borda esquerda */
+  align-items: center;
+  justify-items: center;
+  text-align: center;
 }
 
 .tela-home {
@@ -29,7 +27,7 @@ body{
   max-width: 350px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* também garante alinhamento à esquerda */
+  align-items: flex-start; 
   gap: 10px;
 }
 
@@ -56,9 +54,7 @@ body{
 
 .tela-home button {
   position: absolute;
-  bottom: 200px;
-  left: 50%;
-  transform: translateX(-50%);  
+  bottom: 200px;  
   width: 25%;
   padding: 12px;
   font-size: 1rem;
