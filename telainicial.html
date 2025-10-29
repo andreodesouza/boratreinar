@@ -16,7 +16,7 @@
                 <img src="img/perfil.jpg" alt="Perfil" class="avatar">
                 <div>
                     <p class="bemvinda">Bem-vindo(a)</p>
-                    <h2>André Souza</h2>
+                    <h2 id="nomeUsuario"></h2>
                 </div>
             </div>
             <div class="notificacao">
@@ -88,8 +88,24 @@
       <i>🍴</i>
       <i>👤</i>
     </nav>
-
   </div>
+
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const logado = JSON.parse(localStorage.getItem('usuarioLogado'));
+    const nomeEl = document.getElementById('nomeUsuario');
+
+    if (logado && nomeEl) {
+      nomeEl.textContent = logado.nome || logado.email;
+    } else {
+      console.warn("Nenhum usuário logado, voltando para o login...");
+      setTimeout(() => {
+        window.location.replace("index.html");
+      }, 500);
+    }
+  });
+  </script>
+
 </body>
 </html>
 

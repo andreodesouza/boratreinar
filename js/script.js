@@ -106,13 +106,14 @@ function login() {
 
   if (usuario) {
     alert(`Bem-vindo(a), ${usuario.nome || usuario.email}!`);
-    if (lembrar) localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
-    // redireciona pra home
+    localStorage.setItem('usuarioLogado', JSON.stringify(usuario)); // salva sempre
     window.location.href = "home.html";
-  } else {
+  }
+  else {
     alert("Usuário ou senha incorretos!");
   }
 }
+
 
 // === AUTO LOGIN SE LEMBRAR ===
 window.onload = () => {
