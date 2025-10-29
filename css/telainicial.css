@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #0b0b0d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 430px;
+  padding: 20px;
+  position: relative;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bemvinda {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+.notificacao .bell {
+  font-size: 1.4rem;
+}
+
+
+.metricas {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-metrica {
+  background: #1b1b1e;
+  border-radius: 12px;
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.card-metrica .icone {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.valor {
+  color: #ff6a2d;
+  font-weight: 700;
+}
+
+.rotulo {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+
+.treinos {
+  margin-top: 25px;
+}
+
+.card-treino {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.card-treino img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.card-treino .info {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.card-treino h3 {
+  font-size: 1.1rem;
+}
+
+.card-treino p {
+  font-size: 0.9rem;
+  color: #ff6a2d;
+}
+
+.play {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: #ff6a2d;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vermais {
+  display: block;
+  text-align: right;
+  color: #ff6a2d;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+
+.botao-principal {
+  background: #ff6a2d;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 25px 0;
+  cursor: pointer;
+}
+
+
+.novidades .banner {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.novidades img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  backdrop-filter: blur(5px);
+}
+
+
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1b1b1e;
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 20px 20px 0 0;
+}
+
+.menu i {
+  font-size: 1.5rem;
+}
+
+.botao-centro {
+  background: #ff6a2d;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-20%);
+}

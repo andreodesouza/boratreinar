@@ -53,3 +53,7 @@ document.getElementById("btnvoltar2").addEventListener('click', function(){
 function login(){
   window.location.href = "home.html"
 }
+
+function telaInicial(){
+  window.location.href = "telainicial.html"
+}
