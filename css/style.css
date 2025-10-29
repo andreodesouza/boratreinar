@@ -1,303 +1,230 @@
-body{
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background-image: url('../img/fundo.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-image 0.5s ease;
-  
+  color: white;
 }
 
-.container{
+/* === CONTAINER === */
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
   text-align: center;
+  width: 100%;
+  max-width: 380px;
+  padding: 15px;
 }
 
-.logo{
-  width: 300px;
+/* === LOGO === */
+.logo {
+  width: 280px;
   height: auto;
-}
-
-.tela-inicial {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(63, 61, 61, 0.9);
-  padding: 15px;
-  width: 90%;            
-  max-width: 350px;      
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-
-.tela-inicial h2{
-  color: white;
-  font-size: 18px;
-}
-
-.tela-inicial button {
-  width: 85%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-.tela-inicial .login-btn {
-  background-color: #ff5200;
-  color: white;
-}
-
-.tela-inicial .register-btn {
-  background-color: black;
-  color: white;
-}
-
-.tela-login {
-  display: none;
-  background-color: rgba(63, 61, 61, 0.9);
-  padding: 15px;
-  width: 90%;            
-  max-width: 350px;      
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  gap: 10px;
-  
-}
-
-.tela-login h2{
-  color: white;
-  font-size: 18px;
-}
-
-.tela-login input {
-  width: 85%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
   margin-bottom: 15px;
-
+  transition: width 0.3s ease;
 }
+
+/* === TELAS BASE === */
+.tela-inicial,
+.tela-login,
+.tela-register,
+.dados {
+  background-color: rgba(25, 25, 25, 0.92);
+  padding: 20px 25px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* === Transição ao exibir === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Cabeçalhos === */
+h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* === Inputs === */
+input, select {
+  width: 90%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  margin-bottom: 12px;
+  text-align: center;
+  color: #222;
+}
+
+input:focus, select:focus {
+  border: 2px solid #ff5200;
+  box-shadow: 0 0 8px #ff5200a8;
+}
+
+
+/* === Botões === */
+button {
+  width: 90%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* === Específicos === */
+.login-btn {
+  background-color: #ff5200;
+  color: #fff;
+}
+
+.register-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+.entrar {
+  background-color: #ff5200;
+  color: #fff;
+}
+
+.voltar-btn,
+.voltar-btn2 {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-continuar {
+  background-color: #ff5200;
+  color: #fff;
+}
+
+.btn-registrar{
+  background-color: #ff5200;
+  color: #fff;
+  width: 100%;
+}
+
+
+/* === Checkbox === */
 .checkbox-group {
   display: flex;
   align-items: center;
-  width: 85%;
-  margin-bottom: 15px;
-
+  justify-content: flex-start;
+  gap: 6px;
+  width: 90%;
+  margin-bottom: 10px;
 }
 
 .checkbox-group input[type="checkbox"] {
   width: 16px;
   height: 16px;
+  accent-color: #ff5200; /* cor do check */
   margin: 0;
-  cursor: pointer;
 }
 
 .checkbox-group label {
-  color: white;
-  font-size: 12px;
-  white-space: nowrap;
+  font-size: 0.9rem;
   cursor: pointer;
+  color: #fff;
+  transform: translateY(1px); /* pequeno ajuste vertical */
 }
 
-.tela-login button{
-  color: white;
+
+/* === Dados extras (cadastro final) === */
+.dados button {
+  margin-top: 10px;
   background-color: #ff5200;
-  width: 85%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
 }
 
-.tela-login .voltar-btn {
-  color: white;
-  background-color: black;
-  width: 85%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-.tela-register{
-  display: none;
-  background-color: rgba(63, 61, 61, 0.9);
-  padding: 15px;
-  width: 90%;            
-  max-width: 350px;      
-  flex-direction: column;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  gap: 10px;
-  align-items: center;
-}
-
-.tela-register input{
-  width: 85%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-.tela-register h2{
-  color: white;
-  font-size: 14px;
-}
-
-.tela-register p{
-  color: white;
-}
-
-.tela-register button{
-  color: white;
-  background: #ff5200;
-  border-radius: 15px;
-  width: 85%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-.tela-register .voltar-btn2{
-  color: white;
-  background: black;
-}
-
-.dados{
- display: none;
- background-color: rgba(63, 61, 61, 0.9);
- flex-direction: column;
- box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
- padding: 10px;
- width: 100%;
- max-width: 350px;
- gap: 5px;
-}
-
-.dados button{
-  color: white;
-  background: #ff5200;
-  border-radius: 15px;
-  width: 85%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.tela-register2{
-  padding: 15px;                 
-  flex-direction: column;
-  align-items: center;
-  
-}
-
-.tela-register2 input{
-  width: 93.5%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-.tela-register2 h2{
-  color: white;
-  font-size: 20px;
+.tela-register2 h2 {
+  margin-bottom: 8px;
 }
 
 .tela-register3 {
-  padding: 15px;              
-  flex-direction: row;
-  align-items: center;
+  display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
-.tela-register3 input {
-  width: 40%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  margin-bottom: 15px;
+.tela-register2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
 }
- .tela-register3 select {
-  width: 50%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  margin-bottom: 15px;
- }
 
+.nomeRegistro {
+  width: 100%;
 
+}
 
+.Registrar{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
+.Registrar button{
+  width: 100%;
+}
 
+.tela-register3 input,
+.tela-register3 select {
+  width: 45%;
+}
 
+/* === Tela inicial visível === */
+.tela-inicial {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(25, 25, 25, 0.95);
+}
 
+/* === Textos === */
+.tela-inicial h2 {
+  font-size: 1.2rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.tela-register p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
 
