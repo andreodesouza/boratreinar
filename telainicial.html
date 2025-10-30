@@ -17,6 +17,7 @@
                 <div>
                     <p class="bemvinda">Bem-vindo(a)</p>
                     <h2 id="nomeUsuario"></h2>
+                    <p id="sair" class="bemvinda" onclick="sair()" style="cursor: pointer;">Sair</p>
                 </div>
             </div>
             <div class="notificacao">
@@ -89,22 +90,7 @@
       <i>👤</i>
     </nav>
   </div>
-
-  <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const logado = JSON.parse(localStorage.getItem('usuarioLogado'));
-    const nomeEl = document.getElementById('nomeUsuario');
-
-    if (logado && nomeEl) {
-      nomeEl.textContent = logado.nome || logado.email;
-    } else {
-      console.warn("Nenhum usuário logado, voltando para o login...");
-      setTimeout(() => {
-        window.location.replace("index.html");
-      }, 500);
-    }
-  });
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>

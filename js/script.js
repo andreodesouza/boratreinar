@@ -50,17 +50,10 @@ document.getElementById("btnvoltar2").addEventListener('click', function(){
   document.getElementById("logo").style.width = "300px";
 });
 
-function login(){
-  window.location.href = "home.html"
-}
-
 function telaInicial(){
   window.location.href = "telainicial.html"
 }
 
-// === SISTEMA DE LOGIN E CADASTRO ===
-
-// botão "Registrar" final (na tela de dados)
 document.querySelector('#dados button').addEventListener('click', registrarUsuario);
 
 function registrarUsuario() {
@@ -80,7 +73,7 @@ function registrarUsuario() {
 
   let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-  // Verifica se já existe
+  
   if (usuarios.some(u => u.email === email)) {
     alert("Esse e-mail já está cadastrado!");
     return;
@@ -95,7 +88,7 @@ function registrarUsuario() {
   document.getElementById("telaLogin").style.display = "flex";
 }
 
-// === LOGIN ===
+
 function login() {
   const usuarioInput = document.querySelector('.tela-login input[placeholder="Usuário"]').value.trim();
   const senhaInput = document.querySelector('.tela-login input[placeholder="Senha"]').value.trim();
@@ -106,8 +99,8 @@ function login() {
 
   if (usuario) {
     alert(`Bem-vindo(a), ${usuario.nome || usuario.email}!`);
-    localStorage.setItem('usuarioLogado', JSON.stringify(usuario)); // salva sempre
-    window.location.href = "home.html";
+    localStorage.setItem('usuarioLogado', JSON.stringify(usuario)); 
+    window.location.href = "telainicial.html";
   }
   else {
     alert("Usuário ou senha incorretos!");
@@ -115,16 +108,21 @@ function login() {
 }
 
 
-// === AUTO LOGIN SE LEMBRAR ===
+
 window.onload = () => {
   const logado = JSON.parse(localStorage.getItem('usuarioLogado'));
   if (logado) {
     alert(`Bem-vindo de volta, ${logado.nome || logado.email}!`);
-    window.location.href = "home.html";
+    window.location.href = "telainicial.html";
   }
 };
 
-// === OUTRAS FUNÇÕES ===
+
 function telaInicial() {
   window.location.href = "telainicial.html";
+}
+
+function sair() {
+  localStorage.removeItem('usuarioLogado'); 
+  window.location.href = "index.html"; 
 }
