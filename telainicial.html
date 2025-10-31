@@ -25,11 +25,11 @@
             </div>        
         </header>
 
-        <section class="metricas">
+        <section id= "metricas" class="metricas">
             <div class="card-metrica">
                 <div class="icone">🔥</div>
                 <p class="valor">6.60 CAL</p>
-                <p class="rotulo">Peridas Hoje</p>
+                <p class="rotulo">Perdidas Hoje</p>
             </div>
             <div class="card-metrica">
                 <div class="icone">👣</div>
@@ -42,9 +42,9 @@
                 <p class="rotulo">Batimentos</p>
             </div>
         </section>
-        <section class="treinos">
+        <section id="treinos" class="treinos">
             <div class="card-treino">
-                <img src="img/peito.jpeg" alt="Peito">
+                <img id="btnpeito" src="img/peito.jpeg" alt="Peito" style="cursor: pointer;">
                 <div class="info">
                     <h3>Peito</h3>
                     <p>50 min • 123 Cal</p>
@@ -53,7 +53,7 @@
             </div>
 
       <div class="card-treino">
-        <img src="img/costas.jpg"Costas">
+        <img src="img/costas.jpg" alt="Costas">
         <div class="info">
           <h3>Costas</h3>
           <p>60 min • 82 Cal</p>
@@ -73,13 +73,29 @@
       <a href="#" class="vermais">Ver mais...</a>
     </section>
 
-    <button class="botao-principal">CRIE SEU PLANO DE TREINO</button>
+    <button id="botao-principal" class="botao-principal">CRIE SEU PLANO DE TREINO</button>
 
-    <section class="novidades">
+    <section id="novidades" class="novidades">
       <div class="banner">
         <img src="img/novidades.jpg" alt="Novidades">
         <div class="tag">NOVIDADES</div>
       </div>
+    </section>
+
+    <section id="peito" class="peito">
+      <div class="lista-exercicios">
+        <h2>Exercícios para Peito</h2>
+        <p>3rep</p>
+      </div>  
+      <div class="card-treino">
+        <img src="img/supinoreto.jpg" alt="Supino Reto">
+        <div class="info">
+          <h3>10 X Supino Reto</h3>
+          <p>2 min • 48 Kcal</p>
+        </div>
+        <span class="play">▶</span>
+      </div>
+
     </section>
 
     <nav class="menu">
@@ -105,6 +121,73 @@
     }
   });
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const btnPeito = document.getElementById("btnpeito");
+
+  btnPeito.addEventListener('click', function() {
+    // esconde as seções da tela inicial
+    document.getElementById("metricas").style.display = "none";
+    document.getElementById("treinos").style.display = "none";
+    document.getElementById("novidades").style.display = "none";
+    document.getElementById("botao-principal").style.display = "none";
+
+    // mostra a tela de peito
+    const peito = document.getElementById("peito");
+    peito.style.display = "flex";
+
+    // rola para o topo da nova seção
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+</script>
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const btnPeito = document.getElementById("btnpeito");
+
+  btnPeito.addEventListener('click', function() {
+    // esconde as seções da tela inicial
+    document.getElementById("metricas").style.display = "none";
+    document.getElementById("treinos").style.display = "none";
+    document.getElementById("novidades").style.display = "none";
+    document.getElementById("botao-principal").style.display = "none";
+
+    // mostra a tela de peito
+    const peito = document.getElementById("peito");
+    peito.style.display = "flex";
+
+    // rola para o topo da nova seção
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const btnPeito = document.getElementById("btnpeito");
+
+  btnPeito.addEventListener('click', function() {
+    // esconde as seções da tela inicial
+    document.getElementById("metricas").style.display = "none";
+    document.getElementById("treinos").style.display = "none";
+    document.getElementById("novidades").style.display = "none";
+    document.getElementById("botao-principal").style.display = "none";
+
+    // mostra a tela de peito
+    const peito = document.getElementById("peito");
+    peito.style.display = "flex";
+
+    // rola para o topo da nova seção
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+</script>
+
   <script src="js/script.js"></script>
 
 </body>

@@ -209,3 +209,44 @@ h2 {
   justify-content: center;
   transform: translateY(-20%);
 }
+
+.peito {
+  display: none;               
+  flex-direction: column;      
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;           
+  background: #0b0b0d;         
+  padding-bottom: 80px;        
+}
+
+.lista-exercicios {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lista-exercicios h2 {
+  font-size: 1.4rem;
+}
+
+
+.lista-exercicios p {
+  color: #aaa;
+}
+
+.peito .card-treino {
+  width: 100%;
+}
+
+.peito .card-treino img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(0.7);
+  border-radius: 20px;
+}
+
