@@ -87,7 +87,7 @@
         <h2>Exercícios para Peito</h2>
         <p>3rep</p>
       </div>  
-      <div class="card-treino">
+      <div class="card-treino" onclick="abrirVideo('video/supinoreto.mp4')">
         <img src="img/supinoreto.jpg" alt="Supino Reto">
         <div class="info">
           <h3>10 X Supino Reto</h3>
@@ -95,8 +95,16 @@
         </div>
         <span class="play">▶</span>
       </div>
+      <div id="modalVideo" class="modal">
+        <div class="modal-content">
+          <video id="videoPlayer" controls></video>
+          <span class="fechar" onclick="fecharVideo()">✖</span>
+        </div>
+      </div>
 
     </section>
+
+    
 
     <nav class="menu">
       <i>🏠</i>
@@ -164,6 +172,25 @@ document.addEventListener("DOMContentLoaded", function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+</script>
+
+<script>
+  function abrirVideo(src) {
+  const modal = document.getElementById("modalVideo");
+  const video = document.getElementById("videoPlayer");
+  video.src = src;
+  modal.style.display = "flex";
+  video.play();
+}
+
+function fecharVideo() {
+  const modal = document.getElementById("modalVideo");
+  const video = document.getElementById("videoPlayer");
+  video.pause();
+  video.currentTime = 0;
+  modal.style.display = "none";
+}
+
 </script>
 
 
