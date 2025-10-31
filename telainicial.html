@@ -175,21 +175,29 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 <script>
-  function abrirVideo(src) {
-  const modal = document.getElementById("modalVideo");
-  const video = document.getElementById("videoPlayer");
-  video.src = src;
-  modal.style.display = "flex";
-  video.play();
-}
 
-function fecharVideo() {
-  const modal = document.getElementById("modalVideo");
-  const video = document.getElementById("videoPlayer");
-  video.pause();
-  video.currentTime = 0;
-  modal.style.display = "none";
-}
+  function abrirVideo(src) {
+    const modal = document.getElementById("modalVideo");
+    const video = document.getElementById("videoPlayer");
+
+    modal.classList.add("ativo");
+    video.src = src;
+    video.classList.add("mostrar");
+    video.play();
+  }
+
+  function fecharVideo() {
+    const modal = document.getElementById("modalVideo");
+    const video = document.getElementById("videoPlayer");
+
+    video.pause();
+    video.currentTime = 0;
+    video.src = ""; // limpa o vídeo
+    video.classList.remove("mostrar");
+    modal.classList.remove("ativo");
+  }
+
+
 
 </script>
 

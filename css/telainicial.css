@@ -251,20 +251,24 @@ h2 {
 }
 
 .modal {
-  display: none;
+  display: none; /* Começa oculta */
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
+.modal.ativo {
+  display: flex; /* Mostra apenas quando ativo */
+}
+
 .modal-content {
   position: relative;
   width: 100%;
-  max-width: 430px;     /* limite igual ao app */
-  padding: 0 10px;
+  max-width: 430px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -273,10 +277,15 @@ h2 {
 .modal video {
   width: 100%;
   height: auto;
-  max-height: calc(100vh - 100px); /* respeita topo e rodapé */
+  max-height: calc(100vh - 120px);
   border-radius: 12px;
   object-fit: contain;
   background: #000;
+  display: none; /* Oculto até o vídeo ser carregado */
+}
+
+.modal video.mostrar {
+  display: block; /* Exibe apenas quando acionado */
 }
 
 .modal .fechar {
@@ -295,5 +304,6 @@ h2 {
   font-size: 1.2rem;
   z-index: 1100;
 }
+
 
 
