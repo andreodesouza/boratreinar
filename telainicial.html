@@ -178,7 +178,7 @@
 
     video.pause();
     video.currentTime = 0;
-    video.src = ""; // limpa o vídeo
+    video.src = ""; 
     video.classList.remove("mostrar");
     modal.classList.remove("ativo");
   }
@@ -188,17 +188,14 @@ document.addEventListener("DOMContentLoaded", function() {
   const btnPeito = document.getElementById("btnpeito");
 
   btnPeito.addEventListener('click', function() {
-    // esconde as seções da tela inicial
     document.getElementById("metricas").style.display = "none";
     document.getElementById("treinos").style.display = "none";
     document.getElementById("novidades").style.display = "none";
     document.getElementById("botao-principal").style.display = "none";
 
-    // mostra a tela de peito
     const peito = document.getElementById("peito");
     peito.style.display = "flex";
 
-    // rola para o topo da nova seção
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
@@ -207,15 +204,15 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
   const btnVoltar = document.getElementById("btnvoltar");
   btnVoltar.addEventListener('click', function() {
-    // mostra as seções da tela inicial
+    
     document.getElementById("metricas").style.display = "flex";
     document.getElementById("treinos").style.display = "block";
     document.getElementById("novidades").style.display = "block";
     document.getElementById("botao-principal").style.display = "block";
-    // esconde a tela de peito
+    
     const peito = document.getElementById("peito");
     peito.style.display = "none";
-    // rola para o topo da página inicial
+    
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });

@@ -250,7 +250,7 @@ h2 {
 }
 
 .modal {
-  display: none; /* Começa oculta */
+  display: none; 
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.85);
@@ -260,7 +260,7 @@ h2 {
 }
 
 .modal.ativo {
-  display: flex; /* Mostra apenas quando ativo */
+  display: flex; 
 }
 
 .modal-content {
@@ -280,11 +280,11 @@ h2 {
   border-radius: 12px;
   object-fit: contain;
   background: #000;
-  display: none; /* Oculto até o vídeo ser carregado */
+  display: none; 
 }
 
 .modal video.mostrar {
-  display: block; /* Exibe apenas quando acionado */
+  display: block; 
 }
 
 .modal .fechar {
