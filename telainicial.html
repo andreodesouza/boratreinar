@@ -85,7 +85,7 @@
     <section id="peito" class="peito">
       <div class="lista-exercicios">
         <h2>Exercícios para Peito</h2>
-        <p>Voltar</p>
+        <p id="btnvoltar">Voltar</p>
       </div>  
       <div class="card-treino" onclick="abrirVideo('video/supinoreto.mp4')">
         <img src="img/supinoreto.jpg" alt="Supino Reto">
@@ -99,6 +99,30 @@
         <img src="img/supinoinclinado.jpg" alt="Supino Inclinado + Crucifixo">
         <div class="info">
           <h3>10 X Supino Inclinado</h3>
+          <p>2 min • 48 Kcal</p>
+        </div>
+          <span class="play">▶</span>
+      </div>
+      <div class="card-treino">
+        <img src="img/voador.jpeg" alt="Voador">
+        <div class="info">
+          <h3>10 X Voador</h3>
+          <p>2 min • 48 Kcal</p>
+        </div>
+          <span class="play">▶</span>
+      </div>
+      <div class="card-treino">
+        <img src="img/crossover.jpeg" alt="Crossover">
+        <div class="info">
+          <h3>10 X Crossover polia alta</h3>
+          <p>2 min • 48 Kcal</p>
+        </div>
+          <span class="play">▶</span>
+      </div>
+      <div class="card-treino">
+        <img src="img/flexao.jpeg" alt="Flexão">
+        <div class="info">
+          <h3>10 X Flexão de braço</h3>
           <p>2 min • 48 Kcal</p>
         </div>
           <span class="play">▶</span>
@@ -137,47 +161,6 @@
   });
   </script>
   <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const btnPeito = document.getElementById("btnpeito");
-
-  btnPeito.addEventListener('click', function() {
-    // esconde as seções da tela inicial
-    document.getElementById("metricas").style.display = "none";
-    document.getElementById("treinos").style.display = "none";
-    document.getElementById("novidades").style.display = "none";
-    document.getElementById("botao-principal").style.display = "none";
-
-    // mostra a tela de peito
-    const peito = document.getElementById("peito");
-    peito.style.display = "flex";
-
-    // rola para o topo da nova seção
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const btnPeito = document.getElementById("btnpeito");
-
-  btnPeito.addEventListener('click', function() {
-    // esconde as seções da tela inicial
-    document.getElementById("metricas").style.display = "none";
-    document.getElementById("treinos").style.display = "none";
-    document.getElementById("novidades").style.display = "none";
-    document.getElementById("botao-principal").style.display = "none";
-
-    // mostra a tela de peito
-    const peito = document.getElementById("peito");
-    peito.style.display = "flex";
-
-    // rola para o topo da nova seção
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-});
-</script>
-
-<script>
 
   function abrirVideo(src) {
     const modal = document.getElementById("modalVideo");
@@ -216,6 +199,23 @@ document.addEventListener("DOMContentLoaded", function() {
     peito.style.display = "flex";
 
     // rola para o topo da nova seção
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const btnVoltar = document.getElementById("btnvoltar");
+  btnVoltar.addEventListener('click', function() {
+    // mostra as seções da tela inicial
+    document.getElementById("metricas").style.display = "flex";
+    document.getElementById("treinos").style.display = "block";
+    document.getElementById("novidades").style.display = "block";
+    document.getElementById("botao-principal").style.display = "block";
+    // esconde a tela de peito
+    const peito = document.getElementById("peito");
+    peito.style.display = "none";
+    // rola para o topo da página inicial
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
